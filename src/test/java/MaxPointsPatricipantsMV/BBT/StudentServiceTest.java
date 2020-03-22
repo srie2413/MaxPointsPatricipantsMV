@@ -1,30 +1,14 @@
-package MaxPointsPatricipantsMV;
+package MaxPointsPatricipantsMV.BBT;
 
-import MaxPointsPatricipantsMV.domain.Nota;
 import MaxPointsPatricipantsMV.domain.Student;
-import MaxPointsPatricipantsMV.domain.Tema;
 import MaxPointsPatricipantsMV.repository.StudentXMLRepository;
-import MaxPointsPatricipantsMV.validation.NotaValidator;
 import MaxPointsPatricipantsMV.validation.StudentValidator;
-import MaxPointsPatricipantsMV.validation.TemaValidator;
 import MaxPointsPatricipantsMV.validation.Validator;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
 
-/**
- * Unit test for simple App.
- */
-public class AppTest 
-{
-    /**
-     * Rigorous Test :-)
-     */
-    @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
-    }
+public class StudentServiceTest {
 
     @Test
     public void testAddStudentService() {
@@ -39,4 +23,7 @@ public class AppTest
 
 
     }
+
 }
+
+
