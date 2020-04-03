@@ -35,9 +35,9 @@ public class AddTemaTest {
         temaValidator = new TemaValidator();
         notaValidator = new NotaValidator();
 
-        fileRepository1 = new StudentXMLRepository(studentValidator, "C:\\Users\\Rares\\Documents\\VVSS\\MaxPointsPatricipantsMV\\studenti2.xml");
-        fileRepository2 = new TemaXMLRepository(temaValidator, "C:\\Users\\Rares\\Documents\\VVSS\\MaxPointsPatricipantsMV\\teme2.xml");
-        fileRepository3 = new NotaXMLRepository(notaValidator, "C:\\Users\\Rares\\Documents\\VVSS\\MaxPointsPatricipantsMV\\note2.xml");
+        fileRepository1 = new StudentXMLRepository(studentValidator, "studenti2.xml");
+        fileRepository2 = new TemaXMLRepository(temaValidator, "teme2.xml");
+        fileRepository3 = new NotaXMLRepository(notaValidator, "note2.xml");
 
         temaService = new Service(fileRepository1, fileRepository2, fileRepository3);
     }
