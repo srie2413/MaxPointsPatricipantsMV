@@ -43,14 +43,14 @@ public class AddTemaTest {
     }
 
     @Test
-    public void testAddAssignmentIdNotValid() {
+    public void testAddAssignmentExistingId() {
 
-        Assert.assertEquals(0, temaService.saveTema("null", "tema_noId", 5, 5));
+        Assert.assertEquals(0, temaService.saveTema("1", "tema_existingID", 5, 5));
     }
 
     @Test
     public void testAddAssignmentIdValid() {
-        
+
         Assert.assertEquals(1, temaService.saveTema("4", "tema_Id", 5, 5));
         temaService.deleteTema("4");
     }
