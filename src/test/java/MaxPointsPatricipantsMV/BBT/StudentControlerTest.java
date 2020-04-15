@@ -1,11 +1,7 @@
 package MaxPointsPatricipantsMV.BBT;
-import MaxPointsPatricipantsMV.domain.Nota;
 import MaxPointsPatricipantsMV.domain.Student;
-import MaxPointsPatricipantsMV.domain.Tema;
 import MaxPointsPatricipantsMV.repository.StudentXMLRepository;
-import MaxPointsPatricipantsMV.validation.NotaValidator;
 import MaxPointsPatricipantsMV.validation.StudentValidator;
-import MaxPointsPatricipantsMV.validation.TemaValidator;
 import MaxPointsPatricipantsMV.validation.Validator;
 import org.junit.Test;
 

@@ -1,5 +1,4 @@
-package MaxPointsPatricipantsMV.WBT;
-
+package MaxPointsPatricipantsMV.BBI;
 
 import MaxPointsPatricipantsMV.domain.Nota;
 import MaxPointsPatricipantsMV.domain.Student;
@@ -12,6 +11,7 @@ import MaxPointsPatricipantsMV.validation.NotaValidator;
 import MaxPointsPatricipantsMV.validation.StudentValidator;
 import MaxPointsPatricipantsMV.validation.TemaValidator;
 import MaxPointsPatricipantsMV.validation.Validator;
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -20,7 +20,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class AddTemaTest {
+public class BigBangTest {
 
     Validator<Student> studentValidator ;
     Validator<Tema> temaValidator ;
@@ -30,7 +30,7 @@ public class AddTemaTest {
     TemaXMLRepository fileRepository2;
     NotaXMLRepository fileRepository3;
 
-    Service temaService;
+    Service service;
 
     @Before
     public void init() {
@@ -45,7 +45,7 @@ public class AddTemaTest {
         fileRepository2 = new TemaXMLRepository(temaValidator, "teme2.xml");
         fileRepository3 = new NotaXMLRepository(notaValidator, "note2.xml");
 
-        temaService = new Service(fileRepository1, fileRepository2, fileRepository3);
+        service = new Service(fileRepository1, fileRepository2, fileRepository3);
     }
 
     private void resetInputFiles(){
@@ -75,17 +75,30 @@ public class AddTemaTest {
     }
 
     @Test
-    public void testAddAssignmentExistingId() {
+    public void testAddAssignment() {
 
-        Assert.assertEquals(0, temaService.saveTema("1", "tema_existingID", 5, 5));
+        Assert.assertEquals(1, service.saveTema("1", "tema", 5, 5));
     }
 
     @Test
-    public void testAddAssignmentIdValid() {
+    public void testAddStudent() {
 
-        Assert.assertEquals(1, temaService.saveTema("4", "tema_Id", 5, 5));
-        temaService.deleteTema("4");
+        Assert.assertEquals(1, service.saveStudent("2", "Alin Alin", 937));
     }
 
-}
+    @Test
+    public void testAddGrade() {
+        Assert.assertEquals(-1, service.saveNota("5", "5", 1.0, 14,""));
+        //service.deleteTema("4");
+    }
+    @Test
+    public void bigBang() {
 
+        testAddAssignment();
+        testAddStudent();
+        testAddGrade();
+    }
+
+
+
+}
