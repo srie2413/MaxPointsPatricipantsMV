@@ -29,4 +29,8 @@ public class StudentXMLRepository extends AbstractXMLRepository<String, Student>
 
         return new Student(ID, nume, grupa);
     }
+
+    public Integer getLength() {
+        return this.entities.size();
+    }
 }
