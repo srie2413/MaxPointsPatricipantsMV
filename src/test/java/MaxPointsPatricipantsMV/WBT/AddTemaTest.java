@@ -86,6 +86,7 @@ public class AddTemaTest {
 
         Assert.assertEquals(1, temaService.saveTema("4", "tema_Id", 5, 5));
         temaService.deleteTema("4");
+        System.out.println("Bv ai trecut add assignment invalid");
     }
 
 }
