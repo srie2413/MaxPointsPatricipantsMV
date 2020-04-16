@@ -97,6 +97,7 @@ public class BigBangTest {
         testAddAssignment();
         testAddStudent();
         testAddGrade();
+        System.out.println("Bv ai trecut big bang");
     }
 
 
