@@ -13,7 +13,7 @@ public class StudentControlerTest {
     public void testAddStudentController() {
 
         Validator<Student> studentValidator = new StudentValidator();
-        StudentXMLRepository fileRepository1 = new StudentXMLRepository(studentValidator, "C:\\Users\\Rares\\Documents\\VVSS\\MaxPointsPatricipantsMV\\src\\test\\java\\MaxPointsPatricipantsMV\\studenti2.xml");
+        StudentXMLRepository fileRepository1 = new StudentXMLRepository(studentValidator, "studenti2.xml");
 
         Student student = new Student("1", "nume", 916);
         fileRepository1.save(student);

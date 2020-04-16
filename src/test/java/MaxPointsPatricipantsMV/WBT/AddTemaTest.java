@@ -77,7 +77,8 @@ public class AddTemaTest {
     @Test
     public void testAddAssignmentExistingId() {
 
-        Assert.assertEquals(0, temaService.saveTema("1", "tema_existingID", 5, 5));
+        Assert.assertEquals(1, temaService.saveTema("1", "tema_existingID", 5, 5));
+        Assert.assertEquals(0, temaService.saveTema("1", "tema_existingID2", 6, 6));
     }
 
     @Test

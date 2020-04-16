@@ -22,9 +22,9 @@ public class StudentServiceTest {
         Validator<Student> studentValidator = new StudentValidator();
         Validator<Tema> temaValidator = new TemaValidator();
         Validator<Nota> notaValidator = new NotaValidator();
-        StudentXMLRepository fileRepository1 = new StudentXMLRepository(studentValidator, "C:\\Users\\Rares\\Documents\\VVSS\\MaxPointsPatricipantsMV\\studenti2.xml");
-        TemaXMLRepository fileRepository2 = new TemaXMLRepository(temaValidator, "C:\\Users\\Rares\\Documents\\VVSS\\MaxPointsPatricipantsMV\\teme2.xml");
-        NotaXMLRepository fileRepository3 = new NotaXMLRepository(notaValidator, "C:\\Users\\Rares\\Documents\\VVSS\\MaxPointsPatricipantsMV\\note2.xml");
+        StudentXMLRepository fileRepository1 = new StudentXMLRepository(studentValidator, "studenti2.xml");
+        TemaXMLRepository fileRepository2 = new TemaXMLRepository(temaValidator, "teme2.xml");
+        NotaXMLRepository fileRepository3 = new NotaXMLRepository(notaValidator, "note2.xml");
 
         Service studentService = new Service(fileRepository1,fileRepository2,fileRepository3);
         studentService.saveTema("2", "tema",31,1);
